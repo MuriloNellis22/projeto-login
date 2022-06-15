@@ -1,16 +1,18 @@
 class validation {
     constructor() {
            this.validations = [
-               'minLenght',
-
+               'data-min-Lenght',
+               'data-email-Validate',
+               'data-password-Validate',
+               'data-required'
            ]
     }
     validate(form) {
            
-           
+           let currentValidations = document.querySelectorAll('form .error-validation')
 
            let input = document.getElementsByTagName('input')
-           let inputs = [...input]
+           let inputsArray = [...input]
            
     }
 }

@@ -35,7 +35,16 @@ section {
 h1 {
     color: var(--terciaryColor);
     display: block;
-    margin: 5px auto;
+    margin: 25px auto;
+}
+
+input {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #323232;
+}
+
+label {
+    margin-bottom: 5px;
 }
 
 input, label {
@@ -44,3 +53,22 @@ input, label {
     outline: none;
 }
 
+input:focus {
+    border-color: var(--terciaryColor);
+}
+
+#btn-submit {
+    border: none;
+    margin-top: 20px;
+}
+
+.error-validation {
+    top: 57px;
+    color: #ff1a1a;
+    position: absolute;
+    font-size: 12px;
+}
+
+.template {
+    display: none;
+}
