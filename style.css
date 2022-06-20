@@ -45,6 +45,9 @@ input {
 
 label {
     margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: .8rem;
 }
 
 input, label {
@@ -59,7 +62,16 @@ input:focus {
 
 #btn-submit {
     border: none;
-    margin-top: 20px;
+    margin-top: 40px;
+    color: #ffffff;
+    background-color: var(--primaryColor);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    background-color: #2f5282da;
 }
 
 .error-validation {
