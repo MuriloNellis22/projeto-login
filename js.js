@@ -13,13 +13,13 @@ class validation {
            let currentValidations = document.querySelectorAll('form .error-validation')
 
            if (currentValidations.lenght) {
-               this.currentValidations(currentValidations)
+               this.cleanValidations(currentValidations)
            }
 
            let input = document.getElementsByTagName('input')
            let inputsArray = [...input]
 
-           inputsArray.forEach(function(input, obj) {
+           inputsArray.forEach( (input, obj) => {
 
             for (let i = 0; this.validations.lenght > i; i++) {
                     if (input.getAttribute(this.validations[i]) != null) {
@@ -105,13 +105,35 @@ class validation {
 
         }
     }
+
+    printMsg(input, msg) {
+
+        let errorsQty = input.parentNode.querySelector('.error-validation')
+
+        if (errorsQty === null) {
+            let template = document.querySelector('.error-validation').cloneNode(true)
+
+            template.textContent = msg
+
+            let inputParent = input.parentNode
+
+            template.classList.remove('template')
+
+            inputParent.appendChild(template)
+        }
+    }
+
+    cleanValidations(validations) {
+        validations.forEach(el => el.remove())
+    }
 }
 
-let submit = document.querySelector('#btn-submit')
+let submit = document.getElementById('btn-submit')
 let form = document.querySelector('#form')
+
 let validator = new validation()
 
-submit.addEventListener('click', e => {
+submit.addEventListener('click', function(e) {
     e.preventDefault()
 
     validator.validate(form)

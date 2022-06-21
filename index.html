@@ -14,19 +14,17 @@
         <form id="form">
            <div>
                <label for="user-email">Insira seu email</label>
-               <input type="text" name="user-email" id="user-email" placeholder="Email" autofocus data-min-Lenght="3" data-max-Lenght="20" data-required>
+               <input type="text" name="user-email" id="user-email" placeholder="Email" autofocus data-email-validate data-min-Lenght="3" data-max-Lenght="20" data-required>
            </div>
            <div>
                <label for="user-password">Insira sua senha</label>
-               <input type="text" name="user-password" id="user-password" placeholder="Senha" data-password-Validate>
+               <input type="text" name="user-password" id="user-password" placeholder="Senha" data-password-Validate data-required data-min-lenght="3" data-max-lenght="10">
            </div>
            <div>
                <input type="button" value="Entrar" id="btn-submit">
            </div>
         </form>
     </section>
-    <div>
         <p class="error-validation template"></p>
-    </div>
 </body>
 </html>
