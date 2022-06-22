@@ -64,7 +64,7 @@ class validation {
 
         let email = email.value
 
-        let errorMsg = 'Insira um email no padrão murilo@gmail.com.'
+        let errorMsg = 'Insira um email no padrão murilo@email.com.'
 
         if (!re.test(email)) {
             this.printMsg(input, errorMsg)
@@ -111,6 +111,7 @@ class validation {
         let errorsQty = input.parentNode.querySelector('.error-validation')
 
         if (errorsQty === null) {
+
             let template = document.querySelector('.error-validation').cloneNode(true)
 
             template.textContent = msg
@@ -128,8 +129,8 @@ class validation {
     }
 }
 
-let submit = document.getElementById('btn-submit')
-let form = document.querySelector('#form')
+let submit = document.getElementById("btn-submit")
+let form = document.querySelector("#btn-submit")
 
 let validator = new validation()
 

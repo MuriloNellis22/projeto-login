@@ -11,13 +11,13 @@
 body {
     font-family: 'Mukta', sans-serif;
     box-sizing: border-box;
-    background-color: var(--primaryColor);
+    background-image: url('imagens/image.jpg');
+    background-size: cover;
 }
 
 :root {
     --primaryColor: #1d3557;
-    --secundaryColor: #e63946;
-    --terciaryColor: #457b9d;
+    --secundaryColor: #457b9d;
 }
 
 section {
@@ -33,7 +33,7 @@ section {
 }
 
 h1 {
-    color: var(--terciaryColor);
+    color: var(--secundaryColor);
     display: block;
     margin: 25px auto;
 }
@@ -57,7 +57,7 @@ input, label {
 }
 
 input:focus {
-    border-color: var(--terciaryColor);
+    border-color: var(--secundaryColor);
 }
 
 #btn-submit {
@@ -78,7 +78,7 @@ input:focus {
     top: 57px;
     color: #ff1a1a;
     position: absolute;
-    font-size: 12px;
+    font-size: 5em;
 }
 
 .template {
