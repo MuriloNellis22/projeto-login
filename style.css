@@ -41,6 +41,8 @@ h1 {
 input {
     margin-bottom: 20px;
     border-bottom: 2px solid #323232;
+    position: relative;
+    flex: 1 1 100%;
 }
 
 label {
@@ -78,7 +80,7 @@ input:focus {
     top: 57px;
     color: #ff1a1a;
     position: absolute;
-    font-size: 5em;
+    font-size: .4rem;
 }
 
 .template {

@@ -19,7 +19,7 @@ class validation {
            let input = document.getElementsByTagName('input')
            let inputsArray = [...input]
 
-           inputsArray.forEach( (input, obj) => {
+           inputsArray.forEach( (input) => {
 
             for (let i = 0; this.validations.lenght > i; i++) {
                     if (input.getAttribute(this.validations[i]) != null) {
@@ -130,11 +130,12 @@ class validation {
 }
 
 let submit = document.getElementById("btn-submit")
-let form = document.querySelector("#btn-submit")
+let form = document.querySelector("#form")
 
 let validator = new validation()
 
-submit.addEventListener('click', function(e) {
+submit.addEventListener('click', e => {
+
     e.preventDefault()
 
     validator.validate(form)
