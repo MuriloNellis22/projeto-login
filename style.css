@@ -42,7 +42,6 @@ input {
     margin-bottom: 20px;
     border-bottom: 2px solid #323232;
     position: relative;
-    flex: 1 1 100%;
 }
 
 label {
