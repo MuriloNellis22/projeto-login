@@ -108,19 +108,15 @@ class validation {
 
     printMsg(input, msg) {
 
-        let errorsQty = input.parentNode.querySelector('.error-validation')
+       let errorsQty = input.parentNode.querySelector('form-control.error')
 
         if (errorsQty === null) {
+            
+            let inputParent = parentNode(input)
+            let element = inputParent.Element
 
-            let template = document.querySelector('.error-validation').cloneNode(true)
-
-            template.textContent = msg
-
-            let inputParent = input.parentNode
-
-            template.classList.remove('template')
-
-            inputParent.appendChild(template)
+            small.innerHTML += msg
+            inputParent.className += 'form-control.error';
         }
     }
 
@@ -130,7 +126,10 @@ class validation {
 }
 
 let submit = document.getElementById("btn-submit")
-let form = document.querySelector("#form")
+let form = document.querySelector("#form-control")
+let small = document.getElementsByTagName("small")
+//let email = document.getElementById("email")
+//let password = document.getElementById("password")
 
 let validator = new validation()
 

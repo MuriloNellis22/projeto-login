@@ -39,14 +39,14 @@ h1 {
 }
 
 input {
-    margin-bottom: 20px;
+    
     border-bottom: 2px solid #323232;
     position: relative;
 }
 
 label {
     margin-bottom: 5px;
-    margin-top: 5px;
+    margin-top: 25px;
     font-weight: bold;
     font-size: .8rem;
 }
@@ -75,13 +75,17 @@ input:focus {
     background-color: #2f5282da;
 }
 
-.error-validation {
-    top: 57px;
-    color: #ff1a1a;
-    position: absolute;
-    font-size: .4rem;
+small {
+    /*visibility: hidden;*/
+    position:absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f50c0c;
+    margin: 0px 0px 5px 0px;
+    margin-bottom: 5px;
 }
 
-.template {
-    display: none;
+.form-control.error {
+    visibility: visible;
+    border-color: #f50c0c;
 }

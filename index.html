@@ -10,21 +10,25 @@
 <body>
     <section>
         <h1>Login</h1>
-        <form id="form">
-           <div>
+        <form class="form-control">
+           <div class="form-control2">
                <label for="user-email">Insira seu email</label>
                <input type="text" name="user-email" id="user-email" placeholder="Email" autofocus data-email-validate data-min-Lenght="3" data-max-Lenght="20" data-required>
            </div>
-           <div>
+           <small>Error message</small>
+
+           <div class="form-control2">
                <label for="user-password">Insira sua senha</label>
                <input type="text" name="user-password" id="user-password" placeholder="Senha" data-password-Validate data-required data-min-lenght="3" data-max-lenght="10">
            </div>
+           <small>Error message</small>
+
            <div>
                <input type="button" value="Entrar" id="btn-submit">
            </div>
         </form>
+
     </section>
-        <p class="error-validation template"></p>
         <script src="js.js"></script>
 </body>
 </html>
