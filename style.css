@@ -6,13 +6,13 @@
     margin: 0;
     padding: 0;
     border: none;
+    font-family: 'Mukta', sans-serif;
 }
 
 body {
-    font-family: 'Mukta', sans-serif;
-    box-sizing: border-box;
     background-image: url('imagens/image.jpg');
     background-size: cover;
+    box-sizing: border-box;
 }
 
 :root {
@@ -20,7 +20,7 @@ body {
     --secundaryColor: #457b9d;
 }
 
-section {
+#main-container {
     background-color: #ffffff;
     border-radius: 20px;
     display: flex;
@@ -39,9 +39,7 @@ h1 {
 }
 
 input {
-    
     border-bottom: 2px solid #323232;
-    position: relative;
 }
 
 label {
@@ -75,17 +73,17 @@ input:focus {
     background-color: #2f5282da;
 }
 
-small {
-    /*visibility: hidden;*/
-    position:absolute;
-    font-size: 14px;
-    font-weight: bold;
-    color: #f50c0c;
-    margin: 0px 0px 5px 0px;
-    margin-bottom: 5px;
+.box {
+    position: relative;
 }
 
-.form-control.error {
-    visibility: visible;
-    border-color: #f50c0c;
+.error-validation {
+    color: #ff1a1a;
+    position: absolute;
+    top: 57px;
+    font-size: 12px;
+}
+
+.template {
+    display: none;
 }

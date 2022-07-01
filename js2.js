@@ -16,10 +16,10 @@ class Validator {
                this.cleanValidations(currentValidations)
            }
 
-           let inputs = form.getElementsByTagName('input')
-           let inputsArray = [...inputs]
+           let input = form.getElementsByTagName('input')
+           let inputsArray = [...input]
 
-           inputsArray.forEach((input) => {
+           inputsArray.forEach( (input) => {
 
             for (let i = 0; this.validations.lenght > i; i++) {
                     if (input.getAttribute(this.validations[i]) != null) {
@@ -30,8 +30,10 @@ class Validator {
 
                         this[method](input, value)
                     }
-            }  
-        }, this)  
+            }
+           }
+        , this)
+           
     }
 
     minLenght(input, minValue) {
@@ -106,20 +108,17 @@ class Validator {
 
     printMsg(input, msg) {
 
-       let errorsQty = input.parentNode.querySelector('.error-validation')
+       let errorsQty = input.parentNode.querySelector('.error')
 
         if (errorsQty === null) {
+
+            input.style.borderColor = '#ff0000'
             
-            let template = document.querySelector('.error-validation').cloneNode(true)
-
-            template.textContent = msg
-
-            let inputParent = input.parentNode
-
-            template.classList.remove('template')
-
-            inputParent.appendChild(template)
+            let errorElement = document.createElement('div')
+            errorElement.classList.add('error')
+            errorElement.innerText = msg
             
+            input.parentElement.insertBefore(errorElement, input.elementSibling)
         }
     }
 
@@ -128,12 +127,12 @@ class Validator {
     }
 }
 
-let form = document.querySelector("#register-form")
+let form = document.querySelector("#form")
 let submit = document.querySelector("#btn-submit")
 
 let validator = new Validator()
 
-submit.addEventListener('click', function(e) {
+submit.addEventListener('click', e => {
 
     e.preventDefault()
 

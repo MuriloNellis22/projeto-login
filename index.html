@@ -8,27 +8,25 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <body>
-    <section>
+    <div id="main-container">
         <h1>Login</h1>
-        <form class="form-control">
-           <div class="form-control2">
-               <label for="user-email">Insira seu email</label>
-               <input type="text" name="user-email" id="user-email" placeholder="Email" autofocus data-email-validate data-min-Lenght="3" data-max-Lenght="20" data-required>
+        <form id="register-form" action="">
+           <div class="box">
+               <label for="email">Insira seu email</label>
+               <input type="email" name="email" id="email" placeholder="Email" autofocus data-email-validate data-min-Lenght="3" data-max-Lenght="20" data-required>
            </div>
-           <small>Error message</small>
 
-           <div class="form-control2">
-               <label for="user-password">Insira sua senha</label>
-               <input type="text" name="user-password" id="user-password" placeholder="Senha" data-password-Validate data-required data-min-lenght="3" data-max-lenght="10">
+           <div class="box">
+               <label for="password">Insira sua senha</label>
+               <input type="password" name="password" id="password" placeholder="Senha" data-password-Validate data-required data-min-lenght="3" data-max-lenght="10">
            </div>
-           <small>Error message</small>
 
-           <div>
+           <div class="box">
                <input type="button" value="Entrar" id="btn-submit">
            </div>
         </form>
 
-    </section>
+    </div>
         <script src="js.js"></script>
 </body>
 </html>
